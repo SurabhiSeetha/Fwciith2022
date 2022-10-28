@@ -1,0 +1,256 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage{kvmap}
+\usepackage{graphics} 
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage{float}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand\hlight[1]{\tikz[overlay, remember picture,baseline=-\the\dimexpr\fontdimen22\textfont2\relax]\node[rectangle,fill=blue!50,rounded corners,fill opacity = 0.2,draw,thick,text opacity =1] {$#1$};}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{$\left\lVert#1\right\rVert$}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{\textbf{Optimization-Advanced} }
+\author{Surabhi Seetha}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Get Python code for the figure from 
+\begin{lstlisting}
+https://github.com/SurabhiSeetha/Fwciith2022/tree/main/Assignment%201/codes/src
+\end{lstlisting}
+Get LaTex code from
+\begin{lstlisting}
+https://github.com/SurabhiSeetha/Fwciith2022/tree/main/avr%20gcc
+\end{lstlisting}
+%
+\section{Question}
+\centering
+\textbf{Q(24), Class - 12, CBSE Paper, 2013}\\
+\vspace{0.5cm}
+\raggedright{Show that the height of the cylinder of maximum volume that can be inscribed in a sphere of radius R is $\frac{2R}{\sqrt{3}} $. Also find the maximum volume.}\\
+\centering
+\section{Solution}
+\vspace{0.25cm} 
+\raggedright
+Let \textbf{h} be the height of the Cylinder\\
+\vspace{0.2cm}
+Let \textbf{r} be the radius of the Cylinder\\
+\vspace{0.2cm}
+Let \textbf{R} be the radius of the Sphere\\ 
+\vspace{0.2cm}
+Since the Cylinder is inscribed in the sphere we get,
+\begin{align}
+h = 2\sqrt{R^2 - r^2}
+\label{eq1}
+\end{align}
+We know that the Volume of the Cylinder is,
+\begin{align}
+V = \pi r^2 h
+\label{eq2}
+\end{align}
+By substituting Eq. \eqref{eq1} in \eqref{eq2} we get,
+\begin{align}
+V = 2 \pi r^2 \sqrt{R^2 - r ^2}
+\label{eq3}
+\end{align}
+Given to prove that $ h = \frac{2R}{\sqrt{3}} $ for $\vec{V_{max}}$. And to find the $\vec{V_{max}}$.\\
+\vspace{0.25cm}
+Hence, differentiating Eq. \eqref{eq3} w.r.t \textbf{r} we get,\\
+\begin{align*}
+\frac{dV}{dr} = \frac{d}{dr} [ 2 \pi r^2 \sqrt{R^2 - r ^2} ]
+\end{align*}
+By simplification we get,\\
+\begin{align}
+\frac{dV}{dr} = \frac{4 \pi r R^2 - 6 \pi r^3}{\sqrt{R^2 - r^2}}
+\label{eq4} 
+\end{align}
+Now equating the Eq. \eqref{eq4} to zero and solving for \textbf{r} we get,\\
+\begin{align}
+r^2 = \frac{2R^2}{3}
+\label{eq5}
+\end{align}
+Differentiating Eq. \eqref{eq4} once again w.r.t \textbf{r} and substituting \eqref{eq5} it is observed that,
+\begin{align}
+\frac{d^2V}{dr^2} \textless 0
+\end{align}
+Hence it is a point of Maxima.\\
+\vspace{0.2cm}
+Substituting Eq. \eqref{eq5} in Eq. \eqref{eq1},\\
+\begin{align*}
+h = 2 \sqrt{R^2 - \frac{2R^2}{3}}
+\end{align*} 
+\begin{align}
+\therefore \vec{h} = \frac{2R}{\sqrt{3}}
+\label{eq6}
+\end{align}
+Therefore, the Height of the cylinder of maximum volume that can be inscribed in a sphere of radius R is $\frac{2R}{\sqrt{3}} $.\\
+\vspace{0.25cm}
+\centering
+Hence Proved.\\
+\vspace{0.25cm}
+\raggedright
+Now, to find $V_{max}$, Substitute Eq. \eqref{eq6} in Eq. \eqref{eq2}. We get,\\
+\begin{align*}
+\vec{V_{max}} = \frac{4 \pi R^3}{3 \sqrt{3}}
+\end{align*} 
+\section{Verification Using Geomtric Programming}
+\vspace{0.25cm}
+\raggedright
+Disciplined geometric programming, DGP is a subset of log-log-convex program (LLCP). An LLCP is defined as,\\
+\vspace{2cm}
+\hspace{2cm} minimize $f_0(x)$\\
+\vspace{0.2cm}
+\hspace{2cm} subject to $f_i(x) \leq \tilde{f}_i$, i = 1,2,...,m.\\
+\vspace{0.2cm}
+\hspace{3.8cm} $g_i(x) = \tilde{g}_i$, i = 1,2,...,p.
+\begin{align}
+\label{eq7}
+\end{align}
+
+where the functions $f_i$
+				are log-log convex, $\tilde{f}_i$
+ are log-log concave, and the functions $g_i$
+				and $\tilde{g}_i$
+ are log-log affine. An optimization problem with constraints of the above form in which the goal is to maximize or minimize a log-log concave function is also an LLCP. These LLCPs generalize geometric programming.\\
+
+\vspace{0.25cm}
+
+The given problem can be formulated as a DGP as,
+\begin{align}
+V = \max\limits_{r,h} \hspace{0.2cm} \pi r^2 h\\
+s.t \hspace{0.5cm} h = 2\sqrt{R^2 - r^2}
+\label{eq8}
+\end{align}
+By assuming R = 4 as input, and solving the above DGP Equations using Cvxpy we get,
+
+\begin{align}
+V_{max} = 309.55\\
+h = 4.61\\
+r = 3.26
+\end{align} 
+
+Hence it is proved that $ h = \frac{2R}{\sqrt{3}}$ for $V_{max}$.\\
+\vspace{0.5cm}
+
+
+\end{document}
