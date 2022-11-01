@@ -5,8 +5,8 @@
 #include<Arduino.h>
 //    Can be client or even host   //
 #ifndef STASSID
-#define STASSID "Vijay"  // Replace with your network credentials
-#define STAPSK  "8143738448"
+#define STASSID "Surabhi"  // Replace with your network credentials
+#define STAPSK  "surabhi123"
 #endif
 
 const char* ssid = STASSID;
@@ -39,6 +39,6 @@ X=1;
 Y=1;
 Z=1;
 W=1; 
-F=(X&&!Y)||(X&&W)||(Y&&Z)||(Z&&!W);
+F=(X&&!Y)||(X&&!Z&&!W)||(X&&Z&&W)||(!Y&&!Z)||(!X&&Y&&Z&&!W);
 digitalWrite(22,F);
 }
