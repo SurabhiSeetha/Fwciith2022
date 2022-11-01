@@ -5,6 +5,6 @@ module boolean(
 	output F
 );
 
-assign F=(X&&!Y)||(X&&W)||(Y&&Z)||(Z&&!W);
+assign F=(X&&!Y)||(X&&!Z&&!W)||(X&&Z&&W)||(!Y&&!Z)||(!X&&Y&&Z&&!W);
 
 endmodule
