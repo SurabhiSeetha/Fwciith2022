@@ -86,7 +86,7 @@ int main(void)
     {
 
 	
-	F=(X&&!Y)||(X&&W)||(Y&&Z)||(Z&&!W);
+	F=(X&&!Y)||(X&&!Z&&!W)||(X&&Z&&W)||(!Y&&!Z)||(!X&&Y&&Z&&!W);
 	
 	PyHal_GPIO_Set(21,F);
     
