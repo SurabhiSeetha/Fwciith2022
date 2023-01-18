@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Two Dice}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}\textbf {Sum of Independent Random Variables}}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Random Variables}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\textbf {Uniform Random Numbers}}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}\textbf {Central Limit Theorem}}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}\textbf {From Uniform to Other}}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}\textbf {Triangular Distribution}}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Maximum Likelyhood Detection:BPSK}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}\textbf {Maximum Likelihood}}{5}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Transformation of random variables}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}\textbf {Gaussian to Other}}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}\textbf {Conditional Probability}}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Bivariate Random Variables:FSK}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}\textbf {Two Dimensions}}{9}{subsection.5.1}%
